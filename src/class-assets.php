@@ -52,9 +52,9 @@ class Assets {
 
 		wp_register_style(
 			'college-unit-styles',
-			COLAF4_DIR_URL . 'css/college-dept.css',
+			CDEPAF4_DIR_URL . 'css/college-dept.css',
 			array(),
-			filemtime( COLAF4_DIR_PATH . 'css/college-dept.css' ),
+			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept.css' ),
 			'screen'
 		);
 
@@ -82,9 +82,9 @@ class Assets {
 
 		wp_register_script(
 			'foundation-college',
-			COLAF4_DIR_URL . 'js/foundation.concat.js',
+			CDEPAF4_DIR_URL . 'js/foundation.concat.js',
 			array( 'jquery', 'foundation' ),
-			filemtime( COLAF4_DIR_PATH . '/js/foundation.concat.js' ),
+			filemtime( CDEPAF4_DIR_PATH . '/js/foundation.concat.js' ),
 			true
 		);
 

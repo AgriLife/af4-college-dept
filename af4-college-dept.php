@@ -21,16 +21,16 @@
  */
 
 /* Define some useful constants */
-define( 'COLAF4_DIRNAME', 'af4-college-dept' );
-define( 'COLAF4_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'COLAF4_DIR_FILE', __FILE__ );
-define( 'COLAF4_DIR_URL', plugin_dir_url( __FILE__ ) );
-define( 'COLAF4_TEXTDOMAIN', 'af4-college-dept' );
+define( 'CDEPAF4_DIRNAME', 'af4-college-dept' );
+define( 'CDEPAF4_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'CDEPAF4_DIR_FILE', __FILE__ );
+define( 'CDEPAF4_DIR_URL', plugin_dir_url( __FILE__ ) );
+define( 'CDEPAF4_TEXTDOMAIN', 'af4-college-dept' );
 
 /**
  * The core plugin class that is used to initialize the plugin
  */
-require COLAF4_DIR_PATH . 'src/class-college-dept.php';
+require CDEPAF4_DIR_PATH . 'src/class-college-dept.php';
 spl_autoload_register( 'College::autoload' );
 College::get_instance();
 

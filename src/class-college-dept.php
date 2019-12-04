@@ -50,7 +50,7 @@ class CollegeDept {
 
 		// Add custom fields.
 		if ( class_exists( 'acf' ) ) {
-			require_once COLAF4_DIR_PATH . 'fields/page-header-fields.php';
+			require_once CDEPAF4_DIR_PATH . 'fields/page-header-fields.php';
 		}
 
 	}
@@ -64,11 +64,11 @@ class CollegeDept {
 	private function require_classes() {
 
 		/* Set up asset files */
-		require_once COLAF4_DIR_PATH . 'src/class-assets.php';
+		require_once CDEPAF4_DIR_PATH . 'src/class-assets.php';
 		$ado_assets = new \College\Assets();
 
 		/* Genesis modifications */
-		require_once COLAF4_DIR_PATH . 'src/class-genesis.php';
+		require_once CDEPAF4_DIR_PATH . 'src/class-genesis.php';
 		new \College\Genesis();
 
 	}
@@ -81,7 +81,7 @@ class CollegeDept {
 	 */
 	public function register_widgets() {
 
-		require_once COLAF4_DIR_PATH . 'src/class-widget-af4c-contact.php';
+		require_once CDEPAF4_DIR_PATH . 'src/class-widget-af4c-contact.php';
 		register_widget( 'Widget_AF4C_Contact' );
 
 	}

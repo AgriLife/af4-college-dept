@@ -349,7 +349,7 @@ class Genesis {
 		$logo = sprintf(
 			'<div class="logo cell medium-order-1"><a href="%s" title="College of Agriculture and Life Sciences"><img src="%s"></a></div>',
 			trailingslashit( home_url() ),
-			COLAF4_DIR_URL . 'images/logo-coals-light.svg'
+			CDEPAF4_DIR_URL . 'images/logo-coals-light.svg'
 		);
 
 		echo wp_kses_post( $logo );
@@ -429,11 +429,11 @@ class Genesis {
 			'<div class="logo"><a href="%s" title="%s"><img class="logo-long" src="%s" alt="%s"><img class="logo-long-light" src="%s" alt="%s"><img class="logo-break" src="%s" alt="%s"></a></div>',
 			$home,
 			get_bloginfo( 'name' ),
-			COLAF4_DIR_URL . 'images/logo-coals-long.svg',
+			CDEPAF4_DIR_URL . 'images/logo-coals-long.svg',
 			get_bloginfo( 'name' ),
-			COLAF4_DIR_URL . 'images/logo-coals-long-white.svg',
+			CDEPAF4_DIR_URL . 'images/logo-coals-long-white.svg',
 			get_bloginfo( 'name' ),
-			COLAF4_DIR_URL . 'images/logo-coals-break-white.svg',
+			CDEPAF4_DIR_URL . 'images/logo-coals-break-white.svg',
 			get_bloginfo( 'name' )
 		);
 
