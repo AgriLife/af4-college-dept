@@ -1,0 +1,93 @@
+.has-custom-post-header .site-inner > .grid-container {
+	padding-top: 0;
+}
+
+.custom-header {
+	position: relative;
+	padding: 0;
+	margin-bottom: $grid-padding-gutters;
+
+	h1 {
+		padding-left: $grid-padding-gutters / 2;
+	}
+
+	&.grid-container.full {
+		margin: {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	img {
+		max-width: none;
+		min-height: 200px;
+	}
+
+	.header-image {
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		max-height: 500px;
+
+		@include breakpoint(medium) {
+			max-height: 336px;
+		}
+	}
+}
+
+.custom-title {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: $whiter;
+	font-family: $tungsten;
+	text-align: center;
+	width: 100%;
+
+	h1 {
+		padding: 0;
+		font-size: 7vw;
+		text-align: center;
+		hyphens: auto;
+		margin-bottom: 0;
+		line-height: 110%;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.entry-header {
+		display: inline-block;
+		background-color: rgba(0, 0, 0, 0.8);
+		max-width: 75%;
+		padding: 1.5rem 2rem;
+	}
+
+	.subtitle {
+		display: block;
+		font-size: 3rem;
+		line-height: 1.1;
+		margin-top: .5rem;
+	}
+
+	@include breakpoint(medium) {
+		&,
+		h1 {
+			text-align: left;
+		}
+
+		h1 {
+			font-size: 4rem;
+		}
+
+		@include breakpoint(1014px down) {
+			h1 {
+				font-size: 5vw;
+			}
+		}
+	}
+}

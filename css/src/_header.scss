@@ -1,0 +1,179 @@
+.site-header {
+	font-family: $opensans;
+	letter-spacing: 0;
+
+	&,
+	.wrap.is-at-top {
+		background-color: $maroon;
+	}
+
+	.grid-container .top-bar-left {
+		margin: 0;
+	}
+
+	.title-area {
+		padding: 0;
+	}
+
+	.site-title {
+		font: {
+			weight: 400;
+			family: $opensans;
+		}
+		text-align: center;
+		color: $whiter;
+		letter-spacing: 0;
+
+		a {
+			height: 5.2rem;
+		}
+
+		img {
+			width: 100%;
+			max-width: 26rem;
+		}
+	}
+
+	.sticky > .grid-container {
+		padding: 0 $grid-padding-gutters / 2;
+
+		> .grid-x {
+			padding: 2.1rem $grid-padding-gutters / 2;
+			align-items: flex-end;
+		}
+	}
+
+	.is-stuck {
+		.site-title img {
+			max-width: 30rem;
+		}
+
+		.top-bar.grid-container {
+			padding: {
+				top: 0;
+				bottom: 0;
+			}
+		}
+
+		> .grid-container {
+			padding: {
+				top: 0;
+				bottom: 0;
+			}
+
+			> .grid-x {
+				padding: {
+					top: 1rem;
+					bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	.title-bars {
+		align-self: center;
+
+		&.title-bar-left {
+			padding-right: $grid-padding-gutters;
+		}
+
+		.title-bar,
+		.title-bar.title-bar-navigation .title-bar-title {
+			padding: 0;
+		}
+	}
+
+	// Show the long, light logo on mobile when sticky header is active.
+	.logo-break,
+	.logo-long-light {
+		display: none;
+	}
+
+	@include breakpoint(small only) {
+		text-align: left;
+
+		.logo-long {
+			display: none;
+		}
+
+		.is-anchored {
+			.logo-break {
+				display: inline-block;
+			}
+		}
+
+		.is-stuck {
+			.logo-long-light {
+				display: inline-block;
+			}
+		}
+	}
+
+	@include breakpoint(425px down) {
+		.site-title {
+			.cell.logo {
+				padding-left: .1rem;
+				padding-right: .9rem;
+			}
+
+			.cell + .cell {
+				padding-left: .9rem;
+			}
+		}
+
+		.is-stuck .site-title {
+			.cell.logo {
+				min-width: 62px;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		&,
+		.wrap.is-at-top {
+			background-color: $whiter;
+		}
+
+		.site-title {
+			color: $black;
+			text-align: left;
+
+			a {
+				width: 4.125rem;
+				height: 4.125rem;
+				padding: .5rem;
+			}
+
+			img {
+				width: 100%;
+				max-width: 548px;
+			}
+		}
+
+		.sticky {
+			border-top: none;
+
+			> .grid-container > .grid-x {
+				padding: $grid-padding-gutters / 2;
+			}
+		}
+
+		.is-stuck {
+			border-top-width: 0.4rem;
+
+			> .grid-container > .grid-x {
+				padding: $grid-padding-gutters / 8 $grid-padding-gutters / 2;
+			}
+
+			.site-title img {
+				width: 100%;
+				max-width: 400px;
+			}
+		}
+
+		.dept-nav-menu {
+			position: relative;
+			padding-left: 0;
+		}
+	}
+}
