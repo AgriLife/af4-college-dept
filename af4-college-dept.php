@@ -31,8 +31,8 @@ define( 'CDEPAF4_TEXTDOMAIN', 'af4-college-dept' );
  * The core plugin class that is used to initialize the plugin
  */
 require CDEPAF4_DIR_PATH . 'src/class-college-dept.php';
-spl_autoload_register( 'College::autoload' );
-College::get_instance();
+spl_autoload_register( 'CollegeDept::autoload' );
+CollegeDept::get_instance();
 
 /**
  * Notify user of missing dependencies

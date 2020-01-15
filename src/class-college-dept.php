@@ -65,11 +65,11 @@ class CollegeDept {
 
 		/* Set up asset files */
 		require_once CDEPAF4_DIR_PATH . 'src/class-assets.php';
-		$ado_assets = new \College\Assets();
+		$ado_assets = new \CollegeDept\Assets();
 
 		/* Genesis modifications */
 		require_once CDEPAF4_DIR_PATH . 'src/class-genesis.php';
-		new \College\Genesis();
+		new \CollegeDept\Genesis();
 
 	}
 
