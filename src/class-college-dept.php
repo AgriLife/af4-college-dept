@@ -43,9 +43,6 @@ class CollegeDept {
 		// Require classes.
 		$this->require_classes();
 
-		// Add Widgets.
-		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
-
 		add_image_size( 'medium_cropped', 300, 225, true );
 
 		// Add custom fields.
@@ -70,19 +67,6 @@ class CollegeDept {
 		/* Genesis modifications */
 		require_once CDEPAF4_DIR_PATH . 'src/class-genesis.php';
 		new \CollegeDept\Genesis();
-
-	}
-
-	/**
-	 * Register widgets
-	 *
-	 * @since 0.1.0
-	 * @return void
-	 */
-	public function register_widgets() {
-
-		require_once CDEPAF4_DIR_PATH . 'src/class-widget-af4c-contact.php';
-		register_widget( 'Widget_AF4C_Contact' );
 
 	}
 
