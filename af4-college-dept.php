@@ -37,7 +37,7 @@ College::get_instance();
 /**
  * Notify user of missing dependencies
  */
-register_activation_hook( __FILE__, 'af4_college_activation' );
+register_activation_hook( __FILE__, 'af4_college_dept_activation' );
 
 /**
  * Check for missing dependencies
@@ -45,7 +45,7 @@ register_activation_hook( __FILE__, 'af4_college_activation' );
  * @since 0.1.0
  * @return void
  */
-function af4_college_activation() {
+function af4_college_dept_activation() {
 	$theme = wp_get_theme();
 	if ( 'AgriFlex4' !== $theme->name ) {
 		$error = sprintf(
