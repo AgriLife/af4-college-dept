@@ -58,28 +58,9 @@ module.exports = (grunt) ->
           {src: ['*.php']},
           {src: ['readme.md']},
         ]
-    concat:
-      dist:
-        options:
-          stripBanners: true
-          separator: '\n'
-          process: (src, filepath) ->
-            return src.replace(/\n\/\/# sourceMappingURL=[^\n]+\n?/g, '')
-        src: [
-          'node_modules/foundation-sites/dist/js/plugins/foundation.toggler.min.js',
-        ]
-        dest: 'js/foundation.concat.js'
-      dev:
-        options:
-          sourceMap: true
-        src: [
-          'node_modules/foundation-sites/dist/js/plugins/foundation.toggler.js'
-        ]
-        dest: 'js/foundation.concat.js'
 
   @loadNpmTasks 'grunt-contrib-watch'
   @loadNpmTasks 'grunt-contrib-compress'
-  @loadNpmTasks 'grunt-contrib-concat'
   @loadNpmTasks 'grunt-sass-lint'
   @loadNpmTasks 'grunt-sass'
   @loadNpmTasks 'grunt-postcss'
