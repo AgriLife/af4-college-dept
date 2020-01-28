@@ -1,6 +1,6 @@
 {
   "name": "af4-college-dept",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "College of Agriculture and Life Sciences Department variation of the AgriFlex4 theme",
   "main": "af4-college-dept.php",
   "scripts": {
@@ -21,7 +21,6 @@
     "grunt": "^1.0.3",
     "grunt-contrib-coffee": "^2.0.0",
     "grunt-contrib-compress": "^1.4.3",
-    "grunt-contrib-concat": "^1.0.1",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
     "jquery": "^3.3.1",

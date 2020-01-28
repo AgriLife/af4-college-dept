@@ -34,7 +34,7 @@ module.exports = (grunt) ->
           precision: 2
           includePaths: ['node_modules/foundation-sites/scss']
         files:
-          'css/college-dept.css': 'css/src/college.scss'
+          'css/college-dept.css': 'css/src/college-dept.scss'
       dev:
         options:
           implementation: sass
@@ -43,7 +43,7 @@ module.exports = (grunt) ->
           outputStyle: 'nested'
           precision: 2
         files:
-          'css/college-dept.css': 'css/src/college.scss'
+          'css/college-dept.css': 'css/src/college-dept.scss'
     sasslint:
       options:
         configFile: '.sass-lint.yml'

@@ -51,7 +51,7 @@ class Assets {
 	public function register_styles() {
 
 		wp_register_style(
-			'college-unit-styles',
+			'college-dept-styles',
 			CDEPAF4_DIR_URL . 'css/college-dept.css',
 			array(),
 			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept.css' ),
@@ -68,7 +68,7 @@ class Assets {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( 'college-unit-styles' );
+		wp_enqueue_style( 'college-dept-styles' );
 
 	}
 
