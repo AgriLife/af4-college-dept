@@ -65,8 +65,8 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-sass'
   @loadNpmTasks 'grunt-postcss'
 
-  @registerTask 'default', ['sass:pkg', 'concat:dist', 'postcss:pkg']
-  @registerTask 'develop', ['sasslint', 'concat:dev', 'sass:dev', 'postcss:dev']
+  @registerTask 'default', ['sass:pkg', 'postcss:pkg']
+  @registerTask 'develop', ['sasslint', 'sass:dev', 'postcss:dev']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
