@@ -47,6 +47,7 @@ class CollegeDept {
 
 		// Add custom fields.
 		if ( class_exists( 'acf' ) ) {
+			require_once CDEPAF4_DIR_PATH . 'fields/option-fields.php';
 			require_once CDEPAF4_DIR_PATH . 'fields/page-header-fields.php';
 		}
 

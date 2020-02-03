@@ -29,5 +29,23 @@ class Genesis {
 	 */
 	public function __construct() {
 
+		add_action('genesis_before_header', array( $this, 'add_site_title' ) );
+
+	}
+
+	/**
+	 * Add the site title custom field.
+	 *
+	 * @since 0.3.0
+	 * @return void
+	 */
+	public function add_site_title() {
+
+		echo wp_kses_post( '<div class="college-dept-title show-for-medium"><div class="grid-container">' );
+
+		the_field('site_title', 'option');
+
+		echo wp_kses_post( '</div></div>' );
+
 	}
 }
