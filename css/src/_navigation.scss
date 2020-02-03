@@ -6,4 +6,9 @@
 			background-color: $almost-black;
 		}
 	}
+
+	.nav-primary .menu-primary > li > a:hover,
+	.nav-primary .menu-primary > li.is-active > a {
+		background-color: lighten($maroon, 1.25%);
+	}
 }

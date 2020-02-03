@@ -5,3 +5,19 @@
 	color: $whiter;
 	font-family: $opensans;
 }
+
+@include breakpoint(medium) {
+	.site-header .grid-container {
+		padding: {
+			top: 1rem;
+			bottom: 1rem;
+		}
+	}
+
+	.nav-primary .top-bar {
+		padding: {
+			top: 0;
+			bottom: 0;
+		}
+	}
+}
