@@ -34,12 +34,6 @@ class Assets {
 		// Enqueue extension styles.
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 
-		// Register scripts used in the plugin.
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ), 14 );
-
-		// Enqueue scripts used in the plugin.
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 15 );
-
 	}
 
 	/**
@@ -53,7 +47,7 @@ class Assets {
 		wp_register_style(
 			'college-dept-styles',
 			CDEPAF4_DIR_URL . 'css/college-dept.css',
-			array(),
+			array( 'college-styles' ),
 			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept.css' ),
 			'screen'
 		);
@@ -69,36 +63,6 @@ class Assets {
 	public function enqueue_styles() {
 
 		wp_enqueue_style( 'college-dept-styles' );
-
-	}
-
-	/**
-	 * Register js files.
-	 *
-	 * @since 0.1.0
-	 * @return void
-	 */
-	public function register_scripts() {
-
-		wp_register_script(
-			'foundation-college',
-			CDEPAF4_DIR_URL . 'js/foundation.concat.js',
-			array( 'jquery', 'foundation' ),
-			filemtime( CDEPAF4_DIR_PATH . '/js/foundation.concat.js' ),
-			true
-		);
-
-	}
-
-	/**
-	 * Enqueue js files.
-	 *
-	 * @since 0.1.0
-	 * @return void
-	 */
-	public function enqueue_scripts() {
-
-		wp_enqueue_script( 'foundation-college' );
 
 	}
 
