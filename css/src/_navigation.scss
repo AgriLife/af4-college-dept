@@ -11,4 +11,34 @@
 	.nav-primary .menu-primary > li.is-active > a {
 		background-color: lighten($maroon, 1.25%);
 	}
+
+	.is-dropdown-submenu-parent.opens-right:not(.grid) > .is-dropdown-submenu {
+		padding: 0;
+		min-width: auto;
+
+		a {
+			padding: {
+				left: 1rem;
+				right: 1rem;
+			}
+		}
+	}
+}
+
+.nav-primary .top-bar .submenu,
+.nav-primary .top-bar .submenu ul {
+	background-color: $almost-black;
+}
+
+.nav-primary a,
+.nav-primary a:hover,
+.nav-primary li:hover a,
+.nav-primary li:hover .menu-depth-1 a,
+.nav-primary .menu-depth-1 a {
+	color: $white;
+}
+
+.submenu li.linked > a:hover,
+.submenu li.linked > a:focus {
+	background-color: $maroon;
 }
