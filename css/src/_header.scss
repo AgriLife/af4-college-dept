@@ -6,23 +6,30 @@
 	font-family: $opensans;
 }
 
-@include breakpoint(medium) {
-	.site-header .grid-container {
-		padding: {
-			top: 1rem;
-			bottom: 1rem;
+.site-header {
+	&,
+	& .wrap.is-at-top {
+		background-color: transparent;
+	}
+
+	.title-area {
+		padding-left: $grid-padding-gutters/2;
+	}
+
+	.site-title {
+		text-align: left;
+
+		img {
+			width: auto;
 		}
 	}
 
-	.nav-primary .top-bar {
-		padding: {
-			top: 0;
-			bottom: 0;
+	@include breakpoint(medium) {
+		.grid-container {
+			padding: {
+				top: 1rem;
+				bottom: 1rem;
+			}
 		}
 	}
-}
-
-.site-header,
-.site-header .wrap.is-at-top {
-	background-color: transparent;
 }

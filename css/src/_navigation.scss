@@ -1,44 +1,119 @@
-@include breakpoint(medium) {
-	.nav-primary {
+.nav-primary {
+	background-color: $almost-black;
+
+	@include breakpoint(small only) {
+		font-size: 1.6rem;
+
+		.top-bar,
+		.top-bar ul {
+			background-color: transparent;
+		}
+
+		.menu a {
+			border: 0 dotted $maroon;
+			transition: none;
+
+			&:hover {
+				font-weight: bold;
+				background-color: transparent;
+				border-width: rem-calc(5) 0;
+			}
+		}
+
+		.submenu li.linked > a {
+			font-size: 1.25rem;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+			}
+		}
+
+		#nav-menu-primary {
+			margin: {
+				left: 0;
+				right: 0;
+			}
+			padding: {
+				left: 0;
+				right: 0;
+			}
+
+			> .grid-padding-x > .cell {
+				padding: {
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+
+		.menu-primary > .menu-item > a {
+			padding: {
+				left: $grid-padding-gutters;
+				right: $grid-padding-gutters;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		.menu-depth-1 {
+			border: none;
+		}
+
+		.top-bar {
+			padding: {
+				top: 0;
+				bottom: 0;
+			}
+		}
+
 		&,
 		.top-bar,
 		.top-bar ul {
 			background-color: $almost-black;
 		}
-	}
 
-	.nav-primary .menu-primary > li > a:hover,
-	.nav-primary .menu-primary > li.is-active > a {
-		background-color: lighten($maroon, 1.25%);
-	}
+		.menu-primary > li > a:hover,
+		.menu-primary > li.is-active > a {
+			background-color: lighten($maroon, 1.25%);
+		}
 
-	.is-dropdown-submenu-parent.opens-right:not(.grid) > .is-dropdown-submenu {
-		padding: 0;
-		min-width: auto;
+		.is-dropdown-submenu-parent.opens-right:not(.grid) > .is-dropdown-submenu {
+			padding: 0;
+			min-width: auto;
 
-		a {
-			padding: {
-				left: 1rem;
-				right: 1rem;
+			a {
+				padding: {
+					left: 1rem;
+					right: 1rem;
+				}
 			}
 		}
 	}
-}
 
-.nav-primary .top-bar .submenu,
-.nav-primary .top-bar .submenu ul {
-	background-color: $almost-black;
-}
+	.top-bar .submenu,
+	.top-bar .submenu ul {
+		background-color: $almost-black;
+	}
 
-.nav-primary a,
-.nav-primary a:hover,
-.nav-primary li:hover a,
-.nav-primary li:hover .menu-depth-1 a,
-.nav-primary .menu-depth-1 a {
-	color: $white;
+	a,
+	a:hover,
+	li:hover a,
+	li:hover .menu-depth-1 a,
+	.menu-depth-1 a {
+		color: $white;
+	}
 }
 
 .submenu li.linked > a:hover,
 .submenu li.linked > a:focus {
 	background-color: $maroon;
+}
+
+.title-bar.title-bar-navigation .menu-icon {
+	&::after,
+	&:hover::after {
+		background-color: $black;
+		box-shadow: 0 8px 0 $black, 0 16px 0 $black;
+	}
 }
