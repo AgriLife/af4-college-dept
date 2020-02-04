@@ -12,10 +12,6 @@
 		background-color: transparent;
 	}
 
-	.title-area {
-		padding-left: $grid-padding-gutters/2;
-	}
-
 	.site-title {
 		text-align: left;
 
@@ -24,7 +20,15 @@
 		}
 	}
 
+	.title-area {
+		padding-left: $grid-padding-gutters * .75;
+	}
+
 	@include breakpoint(medium) {
+		.title-area {
+			padding-left: 0;
+		}
+
 		.grid-container {
 			padding: {
 				top: 1rem;
