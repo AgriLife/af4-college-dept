@@ -91,9 +91,20 @@
 		}
 	}
 
-	.top-bar .submenu,
-	.top-bar .submenu ul {
-		background-color: $almost-black;
+	.menu .is-active > a,
+	.dropdown.menu > li.is-active > a {
+		background-color: $maroon;
+	}
+
+	.top-bar .submenu {
+		&,
+		ul {
+			background-color: $maroon;
+		}
+
+		a:hover {
+			background-color: darken($maroon, 8%);
+		}
 	}
 
 	a,
