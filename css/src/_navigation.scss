@@ -1,6 +1,30 @@
 .nav-primary {
 	background-color: $almost-black;
 
+	.menu .is-active > a,
+	.dropdown.menu > li.is-active > a {
+		background-color: $maroon;
+	}
+
+	.top-bar .submenu {
+		&,
+		ul {
+			background-color: $maroon;
+		}
+
+		a:hover {
+			background-color: darken($maroon, 8%);
+		}
+	}
+
+	a,
+	a:hover,
+	li:hover a,
+	li:hover .menu-depth-1 a,
+	.menu-depth-1 a {
+		color: $white;
+	}
+
 	@include breakpoint(small only) {
 		font-size: 1.6rem;
 
@@ -73,9 +97,11 @@
 			background-color: $almost-black;
 		}
 
-		.menu-primary > li > a:hover,
-		.menu-primary > li.is-active > a {
-			background-color: lighten($maroon, 1.25%);
+		.menu-primary {
+			> li > a:hover,
+			> li.is-active > a {
+				background-color: lighten($maroon, 1.25%);
+			}
 		}
 
 		.is-dropdown-submenu-parent.opens-right:not(.grid) > .is-dropdown-submenu {
@@ -90,35 +116,13 @@
 			}
 		}
 	}
-
-	.menu .is-active > a,
-	.dropdown.menu > li.is-active > a {
-		background-color: $maroon;
-	}
-
-	.top-bar .submenu {
-		&,
-		ul {
-			background-color: $maroon;
-		}
-
-		a:hover {
-			background-color: darken($maroon, 8%);
-		}
-	}
-
-	a,
-	a:hover,
-	li:hover a,
-	li:hover .menu-depth-1 a,
-	.menu-depth-1 a {
-		color: $white;
-	}
 }
 
-.submenu li.linked > a:hover,
-.submenu li.linked > a:focus {
-	background-color: $maroon;
+.submenu li.linked > a {
+	&:hover,
+	&:focus {
+		background-color: $maroon;
+	}
 }
 
 .title-bar.title-bar-navigation .menu-icon {
