@@ -1,4 +1,10 @@
 /* Button Block Arrow */
 .wp-block-uagb-column h3.has-text-color {
    @extend %arrow-right;
+
+   white-space: nowrap; /* Customization */
+
+   &::after {
+      margin-left: 0;
+   }
 }
