@@ -5,8 +5,8 @@
         "fields": [
             {
                 "key": "field_5e346051c681e",
-                "label": "Site Title",
-                "name": "site_title",
+                "label": "Site Banner Text",
+                "name": "site_banner_text",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -16,11 +16,30 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
+                "default_value": "College of Agriculture & Life Sciences",
                 "placeholder": "",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": 244
+            },
+            {
+                "key": "field_5ed6b43547769",
+                "label": "Show Site Title?",
+                "name": "show_site_title",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Check this to show the site title from the General Settings page",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [

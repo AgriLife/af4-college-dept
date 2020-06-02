@@ -44,7 +44,7 @@ class Genesis {
 
 		echo wp_kses_post( '<div class="college-dept-title show-for-medium"><div class="grid-container">' );
 
-		the_field('site_title', 'option');
+		the_field('site_banner_text', 'option');
 
 		echo wp_kses_post( '</div></div>' );
 
@@ -61,7 +61,14 @@ class Genesis {
 	 */
 	public function add_site_name( $title, $inside, $wrap ){
 
-		$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo('name') . '</span></a>', $title );
+		$show_site_title = get_field( 'show_site_title', 'option' );
+
+		if ( true === $show_site_title ) {
+
+			$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo('name') . '</span></a>', $title );
+
+		}
+
 		return $title;
 
 	}
