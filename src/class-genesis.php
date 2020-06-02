@@ -63,7 +63,7 @@ class Genesis {
 
 		$show_site_title = get_field( 'show_site_title', 'option' );
 
-		if ( true === $show_site_title ) {
+		if ( false !== $show_site_title ) {
 
 			$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo('name') . '</span></a>', $title );
 
