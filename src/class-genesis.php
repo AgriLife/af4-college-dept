@@ -61,9 +61,7 @@ class Genesis {
 	 */
 	public function add_site_name( $title, $inside, $wrap ){
 
-		$show_site_title = get_field( 'show_site_title', 'option' );
-
-		if ( false !== $show_site_title ) {
+		if ( false !== display_header_text() ) {
 
 			$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo('name') . '</span></a>', $title );
 

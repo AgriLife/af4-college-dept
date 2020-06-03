@@ -33,25 +33,6 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'maxlength' => 244,
 		),
-		array(
-			'key' => 'field_5ed6b43547769',
-			'label' => 'Show Site Title?',
-			'name' => 'show_site_title',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => 'Check this to show the site title from the General Settings page',
-			'default_value' => 1,
-			'ui' => 0,
-			'ui_on_text' => '',
-			'ui_off_text' => '',
-		),
 	),
 	'location' => array(
 		array(
