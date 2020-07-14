@@ -29,8 +29,8 @@ class Genesis {
 	 */
 	public function __construct() {
 
-		add_action('genesis_before_header', array( $this, 'add_site_title' ) );
-		add_filter( 'genesis_seo_title', array( $this, 'add_site_name' ), 11, 3);
+		add_action( 'genesis_before_header', array( $this, 'add_site_title' ) );
+		add_filter( 'genesis_seo_title', array( $this, 'add_site_name' ), 11, 3 );
 
 	}
 
@@ -42,11 +42,12 @@ class Genesis {
 	 */
 	public function add_site_title() {
 
-		echo wp_kses_post( '<div class="college-dept-title show-for-medium"><div class="grid-container">' );
+		$field = get_field( 'site_banner_text', 'option' );
+		if ( empty( $field ) ) {
+			$field = 'College of Agriculture & Life Sciences';
+		}
 
-		the_field('site_banner_text', 'option');
-
-		echo wp_kses_post( '</div></div>' );
+		echo wp_kses_post( "<div class=\"college-dept-title show-for-medium\"><div class=\"grid-container\">$field</div></div>" );
 
 	}
 
@@ -59,11 +60,11 @@ class Genesis {
 	 * @param string $wrap   The html element to wrap the title in.
 	 * @return string
 	 */
-	public function add_site_name( $title, $inside, $wrap ){
+	public function add_site_name( $title, $inside, $wrap ) {
 
 		if ( false !== display_header_text() ) {
 
-			$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo('name') . '</span></a>', $title );
+			$title = str_replace( '</a>', '<span class="site-title-text">' . get_bloginfo( 'name' ) . '</span></a>', $title );
 
 		}
 

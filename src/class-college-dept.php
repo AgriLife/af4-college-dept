@@ -16,7 +16,7 @@
  *
  * @since 0.1.0
  */
-class CollegeDept {
+class College_Dept {
 
 	/**
 	 * File name
@@ -47,7 +47,6 @@ class CollegeDept {
 
 		// Add custom fields.
 		if ( class_exists( 'acf' ) ) {
-			require_once CDEPAF4_DIR_PATH . 'fields/option-fields.php';
 			require_once CDEPAF4_DIR_PATH . 'fields/page-header-fields.php';
 		}
 
@@ -84,24 +83,24 @@ class CollegeDept {
 
 		acf_add_local_field(
 			array(
-				'key' => 'field_5e346051c681f',
-				'label' => 'Site Banner Text',
-				'name' => 'site_banner_text',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
+				'key'               => 'field_5e346051c681f',
+				'label'             => 'Site Banner Text',
+				'name'              => 'site_banner_text',
+				'type'              => 'text',
+				'instructions'      => '',
+				'required'          => 0,
 				'conditional_logic' => 0,
-				'wrapper' => array(
+				'wrapper'           => array(
 					'width' => '',
 					'class' => '',
-					'id' => '',
+					'id'    => '',
 				),
-				'default_value' => 'College of Agriculture & Life Sciences',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => 244,
-				'parent' => 'group_5e14d2d88b326'
+				'default_value'     => 'College of Agriculture & Life Sciences',
+				'placeholder'       => '',
+				'prepend'           => '',
+				'append'            => '',
+				'maxlength'         => 244,
+				'parent'            => 'group_5e14d2d88b326',
 			)
 		);
 
