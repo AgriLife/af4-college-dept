@@ -51,6 +51,9 @@ class CollegeDept {
 			require_once CDEPAF4_DIR_PATH . 'fields/page-header-fields.php';
 		}
 
+		// Add field to AgriFlex4 Options page.
+		add_action( 'acf/init', array( $this, 'register_site_banner_text_field' ), 11 );
+
 	}
 
 	/**
@@ -68,6 +71,39 @@ class CollegeDept {
 		/* Genesis modifications */
 		require_once CDEPAF4_DIR_PATH . 'src/class-genesis.php';
 		new \CollegeDept\Genesis();
+
+	}
+
+	/**
+	 * Add fields to the AgriFlex4 Options page
+	 *
+	 * @since 1.0.1
+	 * @return void
+	 */
+	public function register_site_banner_text_field() {
+
+		acf_add_local_field(
+			array(
+				'key' => 'field_5e346051c681f',
+				'label' => 'Site Banner Text',
+				'name' => 'site_banner_text',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => 'College of Agriculture & Life Sciences',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => 244,
+				'parent' => 'group_5e14d2d88b326'
+			)
+		);
 
 	}
 
