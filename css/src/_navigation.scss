@@ -96,17 +96,6 @@
 				background-color: lighten($maroon, 1.25%);
 			}
 		}
-
-		.is-dropdown-submenu-parent.opens-right:not(.grid) > .is-dropdown-submenu {
-			padding: 0;
-
-			a {
-				padding: {
-					left: 1rem;
-					right: 1rem;
-				}
-			}
-		}
 	}
 }
 
