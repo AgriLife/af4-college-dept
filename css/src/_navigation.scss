@@ -2,7 +2,8 @@
 	background-color: $almost-black;
 
 	.menu .is-active > a,
-	.dropdown.menu > li.is-active > a {
+	.dropdown.menu > li.is-active > a,
+	.top-bar .submenu a[href="#"]:hover {
 		background-color: $maroon;
 	}
 
