@@ -27,64 +27,21 @@
 	}
 
 	@include breakpoint(small only) {
-		font-size: 1.6rem;
-
 		.top-bar,
 		.top-bar ul {
 			background-color: transparent;
 		}
 
 		.menu a {
-			border: 0 dotted $maroon;
 			transition: none;
 
 			&:hover {
-				font-weight: bold;
 				background-color: transparent;
-				border-width: rem-calc(5) 0;
-			}
-		}
-
-		.submenu li.linked > a {
-			font-size: 1.25rem;
-
-			&:hover,
-			&:focus {
-				background-color: transparent;
-			}
-		}
-
-		#nav-menu-primary {
-			margin: {
-				left: 0;
-				right: 0;
-			}
-			padding: {
-				left: 0;
-				right: 0;
-			}
-		}
-
-		.menu-primary > .menu-item > a {
-			padding: {
-				left: $grid-padding-gutters;
-				right: $grid-padding-gutters;
 			}
 		}
 	}
 
 	@include breakpoint(medium) {
-		.menu-depth-1 {
-			border: none;
-		}
-
-		.top-bar {
-			padding: {
-				top: 0;
-				bottom: 0;
-			}
-		}
-
 		&,
 		.top-bar,
 		.top-bar ul {

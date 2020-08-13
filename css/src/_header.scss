@@ -30,7 +30,7 @@
 			padding-left: 0;
 		}
 
-		.grid-container {
+		.grid-container:not(#nav-menu-primary) {
 			padding: {
 				top: 1rem;
 				bottom: 1rem;
