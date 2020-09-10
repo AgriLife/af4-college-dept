@@ -29,7 +29,7 @@ class Genesis {
 	 */
 	public function __construct() {
 
-		add_action( 'genesis_before_header', array( $this, 'add_site_title' ) );
+		add_action( 'genesis_header', array( $this, 'add_site_title' ), 6 );
 		add_filter( 'genesis_seo_title', array( $this, 'add_site_name' ), 11, 3 );
 
 	}
