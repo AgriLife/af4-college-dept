@@ -1,6 +1,6 @@
 {
   "name": "af4-college-dept",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "College of Agriculture and Life Sciences Department variation of the AgriFlex4 theme",
   "main": "af4-college-dept.php",
   "scripts": {
