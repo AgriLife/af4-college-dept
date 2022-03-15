@@ -52,9 +52,16 @@ class Assets {
 
 		wp_register_style(
 			'college-dept-styles',
-			CDEPAF4_DIR_URL . 'css/college-dept.css',
+			CDEPAF4_DIR_URL . 'css/scr/college-dept.scss',
 			array( 'college-styles' ),
-			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept.css' ),
+			filemtime( CDEPAF4_DIR_PATH . 'css/src/college-dept.scss' ),
+			'screen'
+		);
+		wp_register_style(
+			'college-dept-update',
+			CDEPAF4_DIR_URL . 'css/college-dept-update.css',
+			array( 'college-styles' ),
+			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept-update.css' ),
 			'screen'
 		);
 
@@ -69,6 +76,7 @@ class Assets {
 	public function enqueue_styles() {
 
 		wp_enqueue_style( 'college-dept-styles' );
+		wp_enqueue_style( 'college-dept-update' );
 
 	}
 
