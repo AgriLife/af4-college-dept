@@ -52,7 +52,7 @@ class Assets {
 
 		wp_register_style(
 			'college-dept-styles',
-			CDEPAF4_DIR_URL . 'css/scr/college-dept.scss',
+			CDEPAF4_DIR_URL . 'css/src/college-dept.scss',
 			array( 'college-styles' ),
 			filemtime( CDEPAF4_DIR_PATH . 'css/src/college-dept.scss' ),
 			'screen'
