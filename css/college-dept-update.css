@@ -84,7 +84,9 @@ screen and (min-width: 40em) {
 .nav-primary .top-bar .submenu ul {
 	background-color: #500000;
 }
-
+.nav-primary .top-bar a:hover {
+	text-decoration: underline;
+}
 .nav-primary .top-bar .submenu a:hover {
 	background-color: #500000;
 	text-decoration: underline;
@@ -96,6 +98,7 @@ screen and (min-width: 40em) {
 .nav-primary li:hover .menu-depth-1 a,
 .nav-primary .menu-depth-1 a {
 	color: #F8F8F8;
+	background-color: transparent;
 }
 
 @media screen and (max-width: 39.94em) {
@@ -255,6 +258,7 @@ th {
 	font-size: 3.5rem;
 }
 
+/* mobile fixes */
 @media (max-width: 600px) {
 .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
     margin-top: 1rem;
