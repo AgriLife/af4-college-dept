@@ -53,7 +53,7 @@ if ( ! function_exists( 'genesis_site_layout' ) ) {
       the_post(); 
       
       ?>
-      <div id="blog-post-archive-listing">
+      <div class="blog-post-archive-listing">
         <div class="wp-block-columns is-layout-flex post-details">
             
             <?php $image = get_the_post_thumbnail();

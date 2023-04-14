@@ -20,6 +20,17 @@
  * License URI:  http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+//* Remove the entry title (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
+//* Remove the entry meta in the entry header (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+
+//* Remove the post format image (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 
 remove_action('genesis_entry_content', 'genesis_do_post_content');
 add_action( 'genesis_entry_content', 'custom_entry_content' ); // Add custom loop
@@ -41,8 +52,9 @@ function custom_entry_content() {
  
 <?php
 $image = get_the_post_thumbnail();
+$alt   = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
                 if ( $image ) { ?>
-                    <div class="wp-block-cover alignfull is-light has-custom-content-position is-position-bottom-left" id="post-page-cover"><img class="wp-block-cover__image-background" src="<?php the_post_thumbnail_url('full'); ?>"></div>
+                    <div class="wp-block-cover alignfull is-light has-custom-content-position is-position-bottom-left" id="post-page-cover"><img class="wp-block-cover__image-background" alt="<?php echo $alt ?>"" src="<?php the_post_thumbnail_url('full'); ?>"></div>
             <?php      }
                 else { } ?>
 
