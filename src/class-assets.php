@@ -34,6 +34,12 @@ class Assets {
 		// Enqueue extension styles.
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 
+		// Register global scripts used in the theme.
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_public_scripts' ) );
+
+		// Enqueue global scripts.
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_scripts' ) );
+
 	}
 
 	/**
@@ -45,10 +51,10 @@ class Assets {
 	public function register_styles() {
 
 		wp_register_style(
-			'college-dept-styles',
-			CDEPAF4_DIR_URL . 'css/college-dept.css',
+			'college-dept-update',
+			CDEPAF4_DIR_URL . 'css/college-dept-update.css',
 			array( 'college-styles' ),
-			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept.css' ),
+			filemtime( CDEPAF4_DIR_PATH . 'css/college-dept-update.css' ),
 			'screen'
 		);
 
@@ -63,6 +69,38 @@ class Assets {
 	public function enqueue_styles() {
 
 		wp_enqueue_style( 'college-dept-styles' );
+		wp_enqueue_style( 'college-dept-update' );
+
+	}
+
+		/**
+	 * Registers globally used scripts
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	public function register_public_scripts() {
+
+		wp_register_script(
+			'af4-college-dept',
+			CDEPAF4_DIR_URL . 'js/af4-college-dept.js',
+			array( 'jquery' ),
+			filemtime( CDEPAF4_DIR_PATH . 'js/af4-college-dept.js' ),
+			true
+		);
+
+	}
+
+	/**
+	 * Enqueues globally used scripts
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	public function enqueue_public_scripts() {
+
+		wp_enqueue_script( 'af4-college-dept' );
+
 
 	}
 

@@ -43,6 +43,9 @@ class College_Dept {
 		// Require classes.
 		$this->require_classes();
 
+		// Add Widgets.
+		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
+
 		add_image_size( 'medium_cropped', 300, 225, true );
 
 		// Add custom fields.
@@ -73,7 +76,18 @@ class College_Dept {
 		new \CollegeDept\Genesis();
 
 	}
+		/**
+	 * Register widgets
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	public function register_widgets() {
 
+		require_once CDEPAF4_DIR_PATH . 'src/class-widget-af4c-social.php';
+		register_widget( 'Widget_AF4C_Social' );
+
+	}
 	/**
 	 * Autoloads any classes called within the theme
 	 *

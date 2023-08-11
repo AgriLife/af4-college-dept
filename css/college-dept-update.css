@@ -1,0 +1,555 @@
+/* ------  Style updates for college department refresh - Spring 2022 - EB ----- */
+
+/* update link hover color to match brand guide */
+a:active, a:hover {
+    color: #067ed4;
+}
+
+/* Increase line height to comply with accessibility standards */
+p {
+	line-height: 1.5rem;
+}
+
+.wp-block-uagb-column h3.has-text-color::after {
+	content: "";
+	display: inline-block;
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-left: .3em;
+	border: 4px solid #FFE404;
+	border-width: 0 4px 4px 0;
+	position: relative;
+	top: -.2rem;
+	left: -.2rem;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+
+.wp-block-uagb-column h3.has-text-color {
+	white-space: nowrap
+}
+
+.wp-block-uagb-column h3.has-text-color::after {
+	margin-left: 0
+}
+
+.full-width-content .alignfull {
+	width: auto
+}
+
+.site-header,
+.site-header .wrap.is-at-top {
+	background-color: transparent
+}
+
+.site-header .site-title {
+	text-align: left
+}
+
+.site-header .site-title img {
+	width: auto
+}
+
+.site-header .title-area {
+	padding-left: 1.5rem
+}
+
+/* fix college link so it's legible */
+
+.site-header .college-dept-title {
+	background-color: #500000;
+	text-align: right;
+	padding: .2rem 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: .9rem
+}
+.site-header .college-dept-title a {
+    color: #fff;
+		text-decoration: none;
+}
+.site-header .college-dept-title a:hover,  .site-header .college-dept-title a:focus {
+    text-decoration: underline;
+}
+
+/* navigation style updates */
+.nav-primary {
+	background-color: #500000;
+}
+.nav-primary .menu .is-active>a,
+.nav-primary .dropdown.menu>li.is-active>a,
+.nav-primary .top-bar .submenu a[href="#"]:hover {
+	background-color: #500000;
+}
+.nav-primary .top-bar .submenu,
+.nav-primary .top-bar .submenu ul {
+	background-color: #500000;
+}
+.nav-primary .top-bar a:hover {
+	text-decoration: underline;
+}
+.nav-primary .top-bar .submenu a:hover {
+	background-color: #500000;
+	text-decoration: underline;
+}
+
+.nav-primary a,
+.nav-primary a:hover,
+.nav-primary li:hover a,
+.nav-primary li:hover .menu-depth-1 a,
+.nav-primary .menu-depth-1 a {
+	color: #F8F8F8;
+	background-color: transparent;
+}
+
+#nav-menu-primary .accordion-menu li {
+	width: 100%;
+	text-align: left !important;
+}
+
+@media screen and (max-width: 39.94em) {
+	.nav-primary .top-bar,
+	.nav-primary .top-bar ul {
+		background-color: transparent
+	}
+	.nav-primary .menu a {
+		-webkit-transition: none;
+		transition: none
+	}
+	.nav-primary .menu a:hover {
+		background-color: transparent
+	}
+}
+
+@media print,
+screen and (min-width: 40em) {
+	.nav-primary,
+	.nav-primary .top-bar,
+	.nav-primary .top-bar ul {
+		background-color: #060606;
+	}
+	.nav-primary .menu-primary>li>a:hover,
+	.nav-primary .menu-primary>li.is-active>a {
+		background-color: #560000;
+	}
+}
+
+.submenu li.linked>a:hover,
+.submenu li.linked>a:focus {
+	background-color: #500000;
+}
+
+.title-bar.title-bar-navigation .menu-icon::after,
+.title-bar.title-bar-navigation .menu-icon:hover::after {
+	background-color: #000;
+	-webkit-box-shadow: 0 8px 0 #000, 0 16px 0 #000;
+	box-shadow: 0 8px 0 #000, 0 16px 0 #000;
+}
+
+
+
+
+
+
+/* add maroon to headers and footers */
+.nav-primary, .nav-primary .top-bar, .nav-primary .top-bar ul {
+    background-color: #500000;
+}
+.site-footer, .site-footer .footer-container {
+    background-color: #410000;
+}
+/*Add padding above social icons */
+#a2a_follow_widget-2 {
+	padding-top: 1rem;
+}
+
+/*update site title department name on homepage */
+
+/* homepage title */
+.home #landing-page-title .wp-block-cover__inner-container {
+	position: absolute;
+	bottom:1rem;
+	left: 10vw;
+}
+.home #landing-page-title .department-of {
+	font-size: 3.5rem !important;
+  font-weight: 400;
+}
+.home #landing-page-title .home-title-text {
+	font-size: 4rem!important;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	line-height: 3.5rem;
+	text-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
+}
+
+/* home quote spacing */
+#home-quote {
+	margin-top: 4rem;
+}
+#home-quote h3 {
+	padding-top: 3rem;
+}
+
+/* more attempts to kill the sidebar */
+.single-post aside, .page-template-default aside, .archive aside {
+	display: none;
+}
+
+
+/* hide byline info on agribusiness entreprenuership update posts */
+.uagb-post-grid-byline {
+	display: none;
+}
+
+/* Remove padding for the top of pages with covers or background blocks at the top */ 
+#landing-page-title, #interior-page-heading-block, #interior-page-cover, #post-page-cover {
+	margin-top: -2rem;
+} 
+/* Align page titles with the rest of the page content */
+#landing-page-title .wp-block-cover__inner-container {
+	width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/* Make sure the bottom footer covers any overlap from the AgriLife A */
+.site-footer {
+	z-index: 2;
+}
+/* Align footer content left */
+.site-footer .footer-container p {
+    text-align: left;
+    padding-left: 0.94rem;
+    padding-right: 0.94rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 74rem;
+}
+.site-footer .footer-container ul {
+	text-align: left;
+}
+.site-footer .req-links li:first-child {
+    padding-left: 0.65rem !important;
+}
+/* make button border and hover brand-approved red */
+body .wp-block-file .wp-block-file__button, body .wp-block-button .wp-block-button__link, .ab-button-shape-circular, .ab-block-cta .ab-button-shape-circular{
+	border-left-color: #e4002b !important;
+}
+a.wp-block-button__link:hover {
+	box-shadow: none !important;
+	background-color: #e4002b !important;
+}
+/* give white buttons a maroon hover state */
+a.uagb-infobox-cta-link:hover, .entry .entry-content a.uagb-infobox-cta-link:hover, a.uagb-infobox-link-wrap:hover, .entry .entry-content a.uagb-infobox-link-wrap:hover .entry .entry-content a.uagb-infobox-cta-link:hover {
+    color: #fff;
+    background-color: #500000;
+}
+
+
+/* set a max width for paragraph text for legibility */
+p {
+	max-width: 900px;
+}
+.has-text-align-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ...and max width for list items */
+ul li {
+	max-width: 900px;
+}
+
+/* ...except for people list blocks */
+li.people-listing-item {
+	max-width: 100%;
+}
+
+/* remove borders on tables and replace with drop shadows. */
+.wp-block-table.is-style-stripes {
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 10px rgb(112 112 112 / 20%);
+    -webkit-box-shadow: 0 0 10px rgb(112 112 112 / 20%);
+    -moz-box-shadow: 0 0 10px rgba(112, 112, 112, 0.2);
+}
+.wp-block-table .table {
+    border: 0 !important;
+}
+/* Table interior borders */
+
+table {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 0;
+}
+thead tr {
+    background-color: #d1d1d1 !important;
+}
+th {
+    padding: 1rem 0.75rem;
+    border: 1px solid #fff !important;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
+    border: 1px solid #fff;
+}
+.wp-block-table.is-style-stripes tbody tr:nth-child(even) td {
+    border: 1px solid #f0f0f0;
+}
+
+/*improve readability of buttons on photo cover elements */
+.wp-block-cover .wp-block-button a {
+	background-color: #500000 !important;
+	font-size: 1rem;
+	text-decoration: none;
+	border: 1px solid #fff !important;
+}
+.wp-block-cover .wp-block-button a:hover {
+	background-color: #e4002b !important;
+	text-decoration: underline;
+	border: 1px solid #fff !important;
+}
+
+
+
+/* remove negative top margin for first child images */
+.wp-block-cover:first-child, .wp-block-image:first-child {
+    margin-top: 0;
+}
+
+/* Prettifying stat row */
+#stat-row .uagb-columns__inner-wrap {
+	width: 75%;
+}
+#stat-row .uagb-ifb-title-prefix {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	font-size: 3.5rem;
+}
+
+/* Research Cards - Nov 2022*/
+.research-card-row .research-card {
+	padding: 1.5rem;
+	margin: .5rem;
+	box-shadow: 0 0 10px rgb(112 112 112 / 20%);
+    -webkit-box-shadow: 0 0 10px rgb(112 112 112 / 20%);
+    -moz-box-shadow: 0 0 10px rgba(112, 112, 112, 0.2);
+}
+.research-card p {
+	margin-bottom: 1rem;
+}
+
+/* contact row with multiple boxes - Mar 2023*/
+#contact-block {
+	margin-bottom: 0;
+} 
+#contact-block .wp-block-uagb-container {
+	max-width: 60%;
+}
+#contact-block .contact-box {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+#contact-block .contact-box p {
+	margin-bottom: 1rem;
+	color: #fff;
+	font-weight: 500;
+}
+#contact-block .contact-box .wp-block-button {
+	margin: 0;
+}
+#contact-block .contact-box .wp-block-button  .wp-block-button__link {
+	background-color: #fff !important;
+	font-weight: 600;
+	color: #500000;
+	border: 2px solid #fff !important;
+}
+#contact-block .contact-box .wp-block-button  .wp-block-button__link:hover {
+	background-color: #500000 !important;
+	font-weight: 600;
+	color: #fff;
+	border: 2px solid #e4002b;
+}
+
+/* Blog post and query loop styles - Mar 2023 */
+#home-updates .wp-block-post-date {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: right;
+    font-weight: 500;
+    font-size: .9rem;
+    padding-right: 0.5rem;
+    background-color: #f6f6f6;
+}
+#home-updates .wp-block-post-title a {
+	text-decoration: none;
+}
+#home-updates .wp-block-post-title a:hover {
+	text-decoration: underline;
+}
+#home-updates .wp-block-post-excerpt__more-text {
+	text-align: right;
+}
+#blog-posts {
+	margin-top: 3rem;
+}
+#blog-posts .post-details {
+	margin-top: 3rem;
+}
+#blog-posts .post-image {
+	flex-basis: 25%;
+}
+#blog-posts .post-content {
+	flex-basis: 70%;
+}
+#blog-posts .post-content p.blog-date {
+	margin-bottom: 1rem;
+}
+#blog-posts h2.blog-post-title {
+	font-size: 2rem;
+}
+#blog-posts h2.blog-post-title a {
+	text-decoration: none;
+}
+#blog-posts h2.blog-post-title a:hover {
+	text-decoration: underline;
+}
+#post-page-cover {
+	min-height: 250px;
+	margin-bottom: 3rem;
+}
+.post .entry-footer {
+	border-top: 2px solid #f6f6f6;
+    padding-top: 1rem;
+    margin-top: 3rem;
+}
+.post .entry-footer p.entry-meta {
+	margin-bottom: 0;
+	font-style: italic;
+}
+
+
+/* reconfigure social media table so it's easier to read on mobile */
+#social-table-desktop {
+	display: block;
+}
+#social-table-mobile {
+	display: none;
+}
+
+/* display the reconfigured table when the large table starts to break */
+@media (max-width: 900px) {
+		#social-table-desktop {
+		display: none;
+	}
+	#social-table-mobile {
+		display: block;
+	}
+	#social-table-mobile td {
+		padding: 1rem;
+	}
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
+	.home #landing-page-title .wp-block-cover__inner-container {
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+	}
+	.home #landing-page-title .home-title-text {
+		font-size: 3rem!important;
+		line-height: 3rem;
+	}
+	.home #landing-page-title .department-of {
+		font-size: 2rem !important;
+	}
+	#landing-page-title .wp-block-cover__inner-container {
+		width: 100%;
+	}
+	#giving-cover img {
+		object-position: center !important;
+		right: 0;
+		left: auto;
+    	width: 50%;
+	}
+	#giving-cover .wp-block-cover__inner-container .wp-block-spacer {
+		display: none;
+	}
+	#giving-cover .wp-block-cover__inner-container .uagb-columns__wrap {
+		width: 50%;
+		padding: 0;
+	}
+	#giving-cover .real-div {
+		width: 100%;
+	}
+	#giving-cover .fake-div {
+		display: none;
+	}
+}
+
+
+/* smallest screen fixes */
+@media (max-width: 600px) {
+	.home #landing-page-title .wp-block-cover__inner-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+	}
+	.home #landing-page-title .home-title-text {
+		font-size: 3rem!important;
+		line-height: 3rem;
+	}
+	.home #landing-page-title .department-of {
+		font-size: 2rem !important;
+	}
+	#landing-page-title .wp-block-cover__inner-container {
+		width: 100%;
+	}
+	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+		margin-top: 1rem;
+	}
+	.site-header .site-title img {
+		width: 100%;
+		max-width: 20rem;
+	}
+	.wp-block-button .wp-block-button__link {
+		text-align: left;
+	}
+	table {
+		font-size: 15px;
+	}
+	#interested-in-applying-contact-us a {
+		display: block;
+	}
+	#giving-cover {
+	margin-top: 22rem;
+	}
+	#giving-cover .wp-block-cover__inner-container {
+		margin-top: -52rem;
+	}
+	#giving-cover img {
+		object-position: center !important;
+	}
+	#giving-cover .wp-block-cover__inner-container .wp-block-spacer {
+		display: none;
+	}
+	.spacer-no-mobile {
+		display: none;
+	}
+}
+
+/* -- Print styles -- */
+@media print,
+screen and (min-width: 40em) {
+	.site-header .title-area {
+		padding-left: 0
+	}
+	.site-header .header-grid-container {
+		padding-top: 1rem;
+		padding-bottom: 1rem
+	}
+}
